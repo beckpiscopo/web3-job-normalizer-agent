@@ -5,11 +5,11 @@ An AI-powered agent built with LangGraph that normalizes messy web3/crypto job t
 
 ## Features
 
-- 🤖 Intelligent job title analysis using Claude
-- 🔍 Conditional routing based on confidence levels
-- 📊 Automatic categorization into standard web3 roles
-- ⚠️ Flags ambiguous titles for human review
-- 🎯 High accuracy on common web3 positions
+- Intelligent job title analysis using Claude
+- Conditional routing based on confidence levels
+- Automatic categorization into standard web3 roles
+- Flags ambiguous titles for human review
+- High accuracy on common web3 positions
 
 ## How It Works
 ```
