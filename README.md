@@ -1,4 +1,5 @@
-# Job Title Normalizer Agent
+cat > /Users/beckpiscopo/Desktop/dev/agents/job-title-normalizer/README.md << 'EOF'
+# Web3 Job Normalizer Agent
 
 An AI-powered agent built with LangGraph that normalizes messy web3/crypto job titles into standardized categories.
 
@@ -11,64 +12,62 @@ An AI-powered agent built with LangGraph that normalizes messy web3/crypto job t
 - 🎯 High accuracy on common web3 positions
 
 ## How It Works
-
-\`\`\`
+```
 START → Analyze Title → [Decision Point]
                           ├→ High Confidence → Normalize → END
                           └→ Low Confidence → Research → Normalize → END
-\`\`\`
+```
 
 ## Installation
 
 1. Clone the repository:
-\`\`\`bash
+```bash
 git clone https://github.com/beckpiscopo/web3-job-normalizer-agent.git
-cd web3_job-normalizer
-\`\`\`
+cd web3-job-normalizer-agent
+```
 
 2. Create a virtual environment:
-\`\`\`bash
+```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-\`\`\`
+```
 
 3. Install dependencies:
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 4. Create a `.env` file with your API key:
-\`\`\`bash
+```bash
 ANTHROPIC_API_KEY=your_api_key_here
-\`\`\`
+```
 
 ## Usage
 
 Run the test suite:
-\`\`\`bash
+```bash
 python agent.py
-\`\`\`
+```
 
 Use in your own code:
-\`\`\`python
+```python
 from agent import normalize_job_title
 
 result = normalize_job_title("Blockchain Wizard", "Cool Startup")
 print(f"Normalized: {result['normalized_title']}")
 print(f"Category: {result['category']}")
 print(f"Confidence: {result['confidence_score']}")
-\`\`\`
+```
 
 ## Example Output
-
-\`\`\`
-📋 Processing: 'Senior Solidity Engineer' at Uniswap
-✅ Normalized Title: Senior Smart Contract Engineer
-📂 Category: Engineering
-🏷️  Subcategory: Smart Contract
-📊 Confidence: 0.95
-👤 Needs Review: False
-\`\`\`
+```
+Processing: 'Senior Solidity Engineer' at Uniswap
+Normalized Title: Senior Smart Contract Engineer
+Category: Engineering
+Subcategory: Smart Contract
+Confidence: 0.95
+Needs Review: False
+```
 
 ## Categories
 
@@ -91,15 +90,14 @@ print(f"Confidence: {result['confidence_score']}")
 - Python 3.11+
 
 ## Project Structure
-
-\`\`\`
-job-title-normalizer/
+```
+web3-job-normalizer-agent/
 ├── state.py          # State schema definition
 ├── nodes.py          # Node processing functions
 ├── agent.py          # Main graph & test runner
 ├── requirements.txt  # Dependencies
 └── .env             # API keys (not committed)
-\`\`\`
+```
 
 ## Future Enhancements
 
@@ -116,3 +114,4 @@ MIT
 ## Contributing
 
 Contributions welcome! Please feel free to submit a Pull Request.
+EOF
